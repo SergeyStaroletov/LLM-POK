@@ -1,0 +1,33 @@
+.SILENT:
+
+AR_x86=/opt/homebrew/Cellar/i686-elf-gcc/15.1.0/bin/i686-elf-gcc-ar
+AWK=/usr/bin/awk
+CAT=/bin/cat
+CC_x86=/opt/homebrew/Cellar/i686-elf-gcc/15.1.0/bin/i686-elf-gcc
+CD=cd
+CONFIG_CFLAGS=-W -Wall -g -m32
+CONFIG_LDFLAGS=--warn-common
+CONFIG_QEMU_x86= -fda grub-boot-only.img 
+COPY=/bin/cp
+CP=/bin/cp
+CXX_x86=/opt/homebrew/Cellar/i686-elf-gcc/15.1.0/bin/i686-elf-g++
+ECHO=/bin/echo
+ELF_MODE=elf_i386
+GREP=/usr/bin/grep
+GZIP=/usr/bin/gzip
+INSTRUMENTATION=0
+KILL=/bin/kill
+LD_x86=/opt/homebrew/Cellar/i686-elf-binutils/2.44/i686-elf/bin/ld
+MKDIR=/bin/mkdir
+MV=/bin/mv
+OBJCOPY_x86=/opt/homebrew/Cellar/i686-elf-binutils/2.44/i686-elf/bin/objcopy
+OBJDUMP_x86=/opt/homebrew/Cellar/i686-elf-binutils/2.44/i686-elf/bin/objdump
+PERL=/usr/bin/perl
+QEMU_ppc=/opt/homebrew/bin/qemu-system-ppc
+QEMU_sparc=/opt/homebrew/bin/qemu-system-sparc
+QEMU_x86=/opt/homebrew/bin/qemu-system-i386
+RANLIB_x86=/opt/homebrew/Cellar/i686-elf-binutils/2.44/i686-elf/bin/ranlib
+RM=/bin/rm -r -f
+SED=/usr/bin/sed
+SLEEP=/bin/sleep
+TOUCH=/usr/bin/touch
