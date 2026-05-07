@@ -862,7 +862,7 @@ static char pressure_val[MAXSTR];
 #define MYDELAY 8333 //my mac m4 qemu ~time
 
 #define SEC(X) (X*MYDELAY)
-#define NSEC(X) (X*MYDELAY*1000)
+#define USEC(X) (X*MYDELAY*1000)
 
 
 
@@ -872,7 +872,7 @@ void *llm_job() {
     build_transformer_from_memory(&g_transformer, model_weights, model_weights_size);
     printf("done!\n");
 
-    printf("[LLM init] Building transformer...");
+    printf("[LLM init] Building tokenizer...");
     build_tokenizer_from_memory(&g_tokenizer, tokenizer_data, g_transformer.config.vocab_size);
     printf("done!\n");
 
@@ -887,7 +887,7 @@ void *llm_job() {
         pok_sem_wait(sem_est_full, 0);   
 
         pok_time_get(&ns);
-        g_transformer.deadline_us = ns + NSEC(10); 
+        g_transformer.deadline_us = ns + USEC(10); 
         g_transformer.deadline_exceeded = 0;
 
         g_prompt_buffer[0] = 0;
